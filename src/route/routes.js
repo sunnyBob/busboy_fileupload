@@ -1,6 +1,6 @@
 const upload = require('../upload/upload')
 module.exports = async route => {
-  route.get('/login', async ctx => {
+  route.get('/', async ctx => {
     await ctx.render('index', {
       title: "ejs Test",
       content: "Hello World!",
