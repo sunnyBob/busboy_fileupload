@@ -20,7 +20,8 @@ const uploadFile = (ctx, options) => {
     headers: req.headers
   })
   let fileType = options.fileType || 'common'
-  let filePath = path.join(options.path, fileType)
+  let filePath = path.resolve(options.path, fileType)
+  console.log(filePath)
   let mkdirResult = mkdirSync(filePath)
 
   return new Promise( (resolve, reject) => {
